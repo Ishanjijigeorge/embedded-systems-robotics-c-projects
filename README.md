@@ -1,27 +1,43 @@
-# Embedded Systems C Projects
+# Embedded Systems & Robotics — C Projects
 
-Five menu-driven C console programs collected from the original `EVOLVE PROJECT.C` source. Each project is kept in its own directory with its own source file and guide.
+Five beginner-friendly, menu-driven C programs for practicing programming fundamentals through small embedded-systems and robotics scenarios.
+
+> **Learning context:** I am undertaking a three-month internship in Embedded Systems and Robotics at **Evolve Robotics, Kadavanthara, Kochi**. This repository organizes the C projects from that learning experience so they are easy to build, explore, and revisit.
+
+These are console-based learning exercises. They simulate device and system behavior; they do not connect to or control physical hardware.
 
 ## Projects
 
-| # | Project | Source |
+| # | Project | What you can practice |
 |---|---|---|
-| 1 | [Smart Device Inventory & Configuration Manager](01-smart-device-inventory/README.md) | [`main.c`](01-smart-device-inventory/main.c) |
-| 2 | [Embedded System Event Logger & Log Analyzer](02-event-logger/README.md) | [`main.c`](02-event-logger/main.c) |
-| 3 | [Dynamic Device Registry](03-dynamic-device-registry/README.md) | [`main.c`](03-dynamic-device-registry/main.c) |
-| 4 | [Mini Task Scheduler](04-mini-task-scheduler/README.md) | [`main.c`](04-mini-task-scheduler/main.c) |
-| 5 | [Embedded System Diagnostic Console](05-diagnostic-console/README.md) | [`main.c`](05-diagnostic-console/main.c) |
+| 1 | [Smart Device Inventory & Configuration Manager](01-smart-device-inventory/README.md) | Structures, arrays, searching, updating, and file output |
+| 2 | [Embedded System Event Logger & Log Analyzer](02-event-logger/README.md) | Structures, timestamps, filtering, and summary reports |
+| 3 | [Dynamic Device Registry](03-dynamic-device-registry/README.md) | Registry operations, counting, sorting, and menu-driven logic |
+| 4 | [Mini Task Scheduler](04-mini-task-scheduler/README.md) | Task state, priorities, and a simple tick-based scheduling simulation |
+| 5 | [Embedded System Diagnostic Console](05-diagnostic-console/README.md) | State changes, diagnostic checks, and simulated fault reporting |
 
-## Requirements
+Each project folder contains its own `main.c` source file and README with project-specific details.
 
-- A C compiler such as GCC, Clang, or Microsoft C/C++ (MSVC)
-- A terminal or command prompt
+## Getting started
 
-## Build and run one project
+### What you need
 
-Choose a project directory and compile its `main.c` from that directory.
+- A computer with a terminal or command prompt
+- A C compiler: **GCC** or **Clang** is recommended for beginners; MSVC also works
 
-**GCC or Clang (macOS/Linux):**
+Check whether GCC is installed:
+
+```sh
+gcc --version
+```
+
+If that command is not recognized, install a C compiler for your operating system before continuing.
+
+### Build and run your first project
+
+Open a terminal in this repository, then compile and run Project 1.
+
+**Linux or macOS:**
 
 ```sh
 cd 01-smart-device-inventory
@@ -29,7 +45,7 @@ gcc -std=c11 -Wall -Wextra main.c -o device-inventory
 ./device-inventory
 ```
 
-**GCC on Windows (PowerShell):**
+**Windows PowerShell with GCC:**
 
 ```powershell
 Set-Location 01-smart-device-inventory
@@ -37,14 +53,29 @@ gcc -std=c11 -Wall -Wextra main.c -o device-inventory.exe
 .\device-inventory.exe
 ```
 
-Replace the directory and executable names with those listed in the relevant project README. With MSVC, run `cl /W4 main.c` from a Developer Command Prompt and launch `main.exe`.
+To try another project, return to the repository directory, enter its folder, and compile its `main.c`. The executable name is up to you. With MSVC, run `cl /W4 main.c` from a Developer Command Prompt and start the resulting `main.exe`.
 
-## Source fidelity
+## A beginner's way to explore
 
-The five C files are split from the supplied source. The program code is preserved as provided; only the project-title lines that were interleaved between programs in the combined file are omitted from the `.c` files. The READMEs document the original programs and do not imply that code has been corrected or hardware-tested.
+1. Read the matching project README before running the program.
+2. Build and run it without changing the source first.
+3. Follow the menu options and note how the displayed state changes.
+4. Open `main.c` and trace the menu loop, `switch` cases, and structures.
+5. Try ordinary and boundary inputs, such as an unknown ID or an empty list.
+6. Make one small change at a time, then compile and test again.
 
-Some projects write files in their current working directory. Project-specific behavior is documented in each guide.
+## Concepts you'll encounter
 
-## License
+- C structures and fixed-size arrays
+- Variables, loops, conditionals, and `switch` statements
+- Console input and output
+- Searching, updating, sorting, and deleting records
+- Basic timestamps and file handling
+- Representing device states, tasks, events, and faults in software
 
-No license is included. All rights remain with the original author unless a license is added.
+## Important notes
+
+- The source programs are preserved from the supplied combined C file; only the project-title lines between programs were omitted when splitting them into separate files.
+- These are original learning examples, not production-ready or safety-critical software. Input validation, storage limits, and error handling may be incomplete.
+- Programs that write data files create them in the current working directory. Check each project README for details.
+- No license is included. All rights remain with the author unless a license is added.
